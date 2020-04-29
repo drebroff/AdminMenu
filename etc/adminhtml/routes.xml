@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="admin">
+		<route frontName="fm_ad_menu" id="fm_ad_menu">
+			<module before="Magento_Backend" name="Funami_AdminMenu"/>
+		</route>
+		<route frontName="fm_ad_menu2" id="fm_ad_menu2">
+			<module before="Magento_Backend" name="Funami_AdminMenu"/>
+		</route>
+	</router>
+</config>
