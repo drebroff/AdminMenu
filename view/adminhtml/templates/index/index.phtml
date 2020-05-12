@@ -1,1 +1,11 @@
-Hello index/index.phtml
+
+AdminMenu
+<?php
+
+
+/** @var $viewModel \Funami\AdminMenu\ViewModel\Custom */
+
+$viewModel = $block->getViewModel();
+
+?>
+<h1><?= $block->escapeHtml($viewModel->hello()); ?></h1>

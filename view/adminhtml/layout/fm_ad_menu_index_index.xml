@@ -2,12 +2,17 @@
 <page layout="admin-1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 	<body>
 		<referenceContainer name="content">
-			<block class="Funami\AdminMenu\Block\Adminhtml\Index\Index" name="index.index" template="Funami_AdminMenu::index/index.phtml"/>
+<!--			<block class="Funami\AdminMenu\Block\Adminhtml\Index\Index" name="index.index" template="Funami_AdminMenu::index/index.phtml"/>-->
 			<block class="Magento\Framework\View\Element\Text" name="about_us.label">
 				<arguments>
-						<argument translate="true" name="text" xsi:type="string"><br />About Us</argument>
+						<argument translate="true" name="text" xsi:type="string">About Us</argument>
 				</arguments>
 			</block>
+            <block name="fu.block" class="Magento\Backend\Block\Template" template="Funami_AdminMenu::index/index.phtml" >
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Funami\AdminMenu\ViewModel\Custom</argument>
+                </arguments>
+            </block>
 		</referenceContainer>
 	</body>
 </page>
