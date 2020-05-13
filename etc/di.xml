@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!-- Funami/FuSetup/etc/di.xml -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Funami\AdminMenu\Model\FuHelloClass">
+        <arguments>
+            <argument name="someText" xsi:type="string">Order</argument>
+        </arguments>
+    </type>
+    <type name="Funami\AdminMenu\ViewModel\Custom">
+        <arguments>
+            <argument name="collisionStory" xsi:type="object" shared="false">Funami\AdminMenu\Model\FuCollisionClass</argument>
+        </arguments>
+    </type>
+</config>
